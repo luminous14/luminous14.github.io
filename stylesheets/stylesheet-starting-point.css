@@ -1,0 +1,116 @@
+/* You'll want to make the site responsive and nice looking here. Have fun!*/
+
+#wrapper {
+  text-align: left;
+  margin: 0% auto;
+  padding: 0%;
+  border:0;
+  width: 96%;
+  background: url("http://cdn.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-6-full.jpg") repeat;
+  color:black;
+  font-size: 2em;
+}
+
+#side-a ul{
+  list-style-type:none;
+}
+
+a {
+  color:black;
+
+}
+
+img {
+  width: 118%;
+}
+
+#header {
+  margin: 0 0 1.5625% 0;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+#side-a {
+  float: left;
+  width: 15.625%;
+}
+
+#side-a li{
+  padding-top: 2.0833333333;
+}
+
+#side-b {
+  float: right;
+  width: 15.625%;
+}
+
+#content {
+  float: left;
+  width: 68%;
+  margin-left: 4%
+}
+
+#footer {
+  clear: both;
+  background: #A2A2A2;
+}
+
+.reflection {
+  width: 68%;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+@media (max-width: 900px) {
+  #side-a {
+    float:none;
+    display: inline;
+  }
+  #side-a li {
+    display: inline;
+    padding: .1%;
+    margin-left: 8%
+  }
+  #content {
+    margin-left: 10%;
+  }
+  #wrapper {
+    font-size: 1.85em;
+  }
+}
+
+
+@media (max-width: 640px) {
+  #side-a li {
+    padding: .5%;
+    margin-left: 6%;
+  }
+  #side-a {
+    float:none;
+    display: inline;
+
+  }
+  #wrapper {
+    font-size: 1.65em;
+  }
+}
+@media (max-width: 512px) {
+  #wrapper {
+    font-size: 1.45em;
+  }
+  #side-a li {
+    padding: 1%;
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 412px) {
+
+  #side-a li {
+    padding: .8%;
+    margin-left: 0%;
+  }
+}
+
