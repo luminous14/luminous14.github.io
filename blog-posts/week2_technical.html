@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
+    <title>David Lamps's Journey into Web Development</title>
+  </head>
+    <body>
+      <div>
+        <a href="../index.html">Home</a>
+
+      </div>
+      <div>
+        <p class="myname">David Lamps</p>
+      </div>
+      <div>
+        <p id="description">Illustration - Animation - Programming - Life</p>
+      </div>
+      <div class="gray_text" id="left">
+        <p>August 8, 2014</p>
+        <h3>CSS: Relative, Absolute, and Fixed Positioning</h3>
+          <p>As I worked through various challenges this week and last, I dealt with positioning elements with CSS. At times I felt like I was banging my head against a wall trying to get things to line up the way I want. Along the way I've picked up some clues on what's going on, but the simple research I did for this technical post has definitely produced an "aha moment" for me.</p>
+
+          The first resource I found was from <a href="https://www.youtube.com/watch?v=aFtByxWjfLY">LearnWebCode</a> on youtube. After all the reading I've done on the subject, this visual presentation really helped make things click. What helped solidify my learning came from <a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">Learn CSS Positioning in Ten Steps</a>. This site shows simple examples of how CSS code can affect the relationships and positioning of html blocks. The first thing to keep in mind is that everything in html is a block, so you can move any of these around using position properties. I have examples from the site below, but to get the real effect please click the link above and see for yourself.
+        </p>
+       <div id="line"></div>
+
+       <h2>Static</h2>
+       Firstly, the default positioning of blocks in html is "static." In this example, the CSS code for div-1 is set to static, however it's redundant since it doesn't really change the way the blocks are displayed.
+       <br></br>
+       <img id="examples" src="imgs/raf01.png"/>
+
+       <div id="line"></div>
+
+       <h2>Relative</h2>
+       This is where my big "aha moment" came. When a block is set to relative, you can tell it how many pixels and in what direction to offset it from its parent. In this example, the div-1 block is being moved down 20 pixels and to the left 40 pixels.
+
+       <img id="examples" src="imgs/raf02.png"/>
+       <div id="line"></div>
+       <h2>Absolute</h2>
+       Seeing this example of absolute positioning helped my understanding greatly as well. The red box bellow, div-1a, has its position set to absolute. This means that when I position it, it won't be tied to its parent block, which in this case is the black box, div-1. In this example it has been placed 0 pixels from the top, and 0 pixels from the right. The result is that it will be stuck in the upper right corner of the browser window.
+       <img id="examples" src="imgs/raf03.png"/>
+       <div id="line"></div>
+       <h2>Relative + Absolute</h2>
+       Relative and absolute positioning can be linked together, as seen in the example below. The red block still has an absolute positioning, however now it's parent block, div-1, has been assigned to position:relative. When a parent block has this assignment, a child block with absolute positioning
+       can't leave the bounds of the parent block. The red block is still positioned at 0 pixels from the top and 0 pixels from the right, as in the previous example.
+       <img id="examples" src="imgs/raf04.png"/>
+       <div id="line"></div>
+       <h2>Fixed</h2>
+       Lastly, there's fixed positioning. I found <a href="http://www.yorku.ca/nmw/facs1939f13/week02/css_relVSabsVSfixed.html">This Site</a> which demonstrates it.
+       <img id="examples" src="imgs/raf10.png"/>
+       Basically, when a block is set to fixed position, it won't scroll with the rest of the page. In this example it just sits in the same spot while the other text scrolls beneath it.
+       <br></br>
+       <div id="line"></div>
+       <h2>So What's Your Position?</h2>
+       Positioning has been one of my biggest challenges over the past two weeks. I need to practice more to have it truly sink in, but for now it's a start! I feel more confident about using these concepts in the future having done research for this blog post. Hopefully this made sense to you. If not, I'd be happy to get your feedback!
+
+       <br></br><br></br><br></br><br></br><br></br><br></br>
+
+      </div>
+      <div id="right">
+        <div>
+          <img id="profile" src="imgs/LinkedInProfileWeb2.jpg"/>
+        </div>
+        <div>
+          <p class="gray_text">Recent Posts</p>
+          <a href="https://luminous14.github.io/blog-posts/t1-compare-websites.html">Comparing Websites</a><br></br>
+          <a href="https://luminous14.github.io/blog-posts/c1-chefs-kitchen.html">Chefs in the Kitchen</a><br></br>
+        </div>
+        <div>
+          <p class="gray_text">Archives</p>
+          <a href="">August 2014</a><br></br>
+        </div>
+      </div>
+    </body>
+</html>
+

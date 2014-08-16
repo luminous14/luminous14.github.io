@@ -47,7 +47,7 @@ a:visited {
   margin-left:6%;
   margin-right: 43%;
   margin-bottom: 5%;
-
+  margin-right:;
 }
 
 #right {
@@ -58,30 +58,25 @@ a:visited {
   margin-bottom: 7%;
 }
 
-#profile {
+#img {
   height: 160px;
   width:160px;
   float: left;
   padding-bottom: 10%;
   padding-right: 20%;
   padding-top: 15%;
+
 }
 
 #examples {
-  width: 100%;
+  width: 680px;
   border: solid lightgray 2px;
   margin-bottom: 30px;
   border-radius: 5px;
-  margin-top: 10px;
 }
 
 div:nth-child(5) a{
   font-size: 80%;
 }
 
-#line {
-  width: 100%;
-  border: solid 1px lightgray;
-  margin-bottom: 8%;
-}
 
