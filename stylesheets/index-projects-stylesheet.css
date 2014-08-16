@@ -45,7 +45,7 @@ nav {
 }
 
 #middle {
-  height: 5%;
+  height: 7%;
   margin-top: 40px;
   color: #808080;
   font-size: 1em;
@@ -56,6 +56,7 @@ p a {
 }
 
 footer {
+  clear:both;
   padding-top: 6px;
   padding-left: 180px;
   height: 500px;
