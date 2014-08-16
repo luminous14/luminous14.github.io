@@ -1,68 +1,58 @@
 
 body {
-  width: 98%;
-  color: black;
-  font: Verdana, Arial, sans-serif;
-  font-size:1em;
+width: 98%;
+color: black;
+font: Verdana, Arial, sans-serif;
+font-size:1em;
 }
-
 header {
-  padding-top:22px;
-  padding-bottom:20px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  background-color: #663300;
-  color: white;
-  text-align: center;
+padding-top:22px;
+padding-bottom:20px;
+border-radius: 5px;
+font-size: 1.2em;
+background-color: #663300;
+color: white;
+text-align: center;
 }
-
 #definitions {
-  margin-top:10px;
-  background-color: beige;
-  padding:5px;
+margin-top:10px;
+background-color: beige;
+padding:5px;
 }
-
 #profiles {
-  width: 100%;
-  background-color: #c1c1c1;
+width: 100%;
+background-color: #c1c1c1;
 }
-
 #profile_left {
-  position:relative;
-  display:inline-block;
-  width: 50%;
+position:relative;
+display:inline-block;
+width: 50%;
 }
-
 #profile_right {
-  position:absolute;
-  display:inline-block;
-  width:50%;
+position:absolute;
+display:inline-block;
+width:50%;
 }
-
 img {
-  padding: 5px;
-  height: 180px;
-  width: 180px;
-  display:inline-block;
-  border-radius: 8px;
-  -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-  -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-  box-shadow: 1px 2px 3px rgba(0,0,0,.3);
+padding: 5px;
+height: 180px;
+width: 180px;
+display:inline-block;
+border-radius: 8px;
+-moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+box-shadow: 1px 2px 3px rgba(0,0,0,.3);
 }
-
 #bio {
-  display: inline-block;
-  width: 50%;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 20px;
+display: inline-block;
+width: 50%;
+padding-left: 5px;
+padding-right: 5px;
+padding-bottom: 20px;
 }
-
 footer {
-  cover: left;
-  width: 97%;
-  position: relative;
-  text-align: left;
+cover: left;
+width: 97%;
+position: relative;
+text-align: left;
 }
-
-
