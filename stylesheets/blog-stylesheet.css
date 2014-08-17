@@ -7,6 +7,7 @@ html {
   font-size:400%;
   color: #636363;
   text-align: center;
+  margin-top: 3%;
 }
 
 div:first-child {
@@ -17,10 +18,6 @@ div:first-child a {
   text-decoration: none;
 }
 
-div:nth-child(3) {
-  color: white;
-}
-
 a:link {
   color: #808080;
 }
@@ -29,12 +26,24 @@ a:visited {
   color: #808080;
 }
 
+#atdbc {
+  text-align: center;
+  color: #636363;
+  font-size: 1.2em;
+  margin-bottom: 3%;
+  position: relative;
+  top: -5px;
+}
+
 #description {
-  border: 5px solid #8c8c8c;
-  background-color: #8c8c8c;
+  color:white;
   text-align: center;
   margin-left: 40px;
   margin-right: 40px;
+  padding:3px;
+    background: -webkit-linear-gradient(left, white, #8c8c8c, #8c8c8c, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, white, #8c8c8c, #8c8c8c, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, white, #8c8c8c, #8c8c8c, white); /* For Firefox 3.6 to 15 */
 }
 
 .gray_text {
@@ -62,9 +71,14 @@ a:visited {
   height: 160px;
   width:160px;
   float: left;
-  padding-bottom: 10%;
-  padding-right: 20%;
-  padding-top: 15%;
+  margin-bottom: 10%;
+  margin-right: 20%;
+  margin-top: 23px;
+  border-radius: 8px;
+  border: #eeeeee solid 2px;
+  -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  box-shadow: 1px 2px 3px rgba(0,0,0,.3);
 }
 
 #examples {
