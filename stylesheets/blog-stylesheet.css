@@ -99,3 +99,11 @@ div:nth-child(5) a{
   margin-bottom: 8%;
 }
 
+#imgJavaScript {
+  height:30%;
+  width:30%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
