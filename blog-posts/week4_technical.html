@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
+    <title>David Lamps's Journey into Web Development</title>
+  </head>
+    <body>
+      <div>
+        <a href="../index.html">Home</a>
+      </div>
+
+      <div class="myname">
+        David Lamps
+      </div>
+
+      <div id="atdbc">
+        at DevBootcamp
+      </div>
+
+      <div>
+        <p id="description">Illustration - Animation - Programming - Life</p>
+      </div>
+      <div class="gray_text" id="left">
+        <p>August 29, 2014</p>
+        <h3>Enumerable#group_by - Another Way to Make a Hash</h3>
+        <img id="imgJavaScript" src="imgs/cornedBeefHash.jpg">
+
+        <p>I love learning what methods can do on ruby.doc.org. For this post I'll take you through what I've learned about <a href="http://ruby-doc.org/core-2.0.0/Enumerable.html#method-i-group_by">Enumerable#group_by.</a></p>
+
+        <p>The group_by method of the Enumarable module in Ruby takes a set of data and groups it into a collection know as a hash. The examples below show an array of names of my family members:
+
+        <p>
+          <strong id="code_example">>family = ["david", "lamps", "becky", "lamps", "andrew", "lamps", "adellyn", "lamps"]</strong>
+<div id="line2"></div>
+
+          Below I'll show how the group_by method organizes my family member's names into a hash, depending on how I tell it to group it. When applying .group_by, in the first example it is followed by { |name| name[0] }. This is saying for each name in my array, use the 0 index position of the word to group them into key-value pairs within a hash. The first example uses the first letter of each name as the criteria:
+<br></br>
+          <strong id="code_example">>family.group_by { |name| name[0] }</strong> <br></br>
+          #=> {"d"=>["david"], "l"=>["lamps", "lamps", "lamps", "lamps"], "b"=>["becky"], "a"=>["andrew", "adellyn"]}
+<br></br>
+          This basically collects all of the names based on if they have the same first letter. So david is assigned to the d key, lamps,lamps,lamps,lamps is assignd to the l key, etc.
+<br></br>
+
+<div id="line2"></div>
+
+          Below are examples of grouping by various index numbers:
+<br></br>
+          <strong id="code_example">>family.group_by { |name| name[1] }</strong><br></br>
+           <strong id="code_example">#=> {"a"=>["david", "lamps", "lamps", "lamps", "lamps"], "e"=>["becky"], "n"=>["andrew"], "d"=>["adellyn"]}</strong>
+<br></br>
+           <strong id="code_example">>family.group_by { |name| name[2] }</strong><br></br>
+           <strong id="code_example">#=> {"v"=>["david"], "m"=>["lamps", "lamps", "lamps", "lamps"], "c"=>["becky"], "d"=>["andrew"], "e"=>["adellyn"]}</strong>
+<br></br>
+           <strong id="code_example">>family.group_by { |name| name[3] }</strong><br></br>
+           <strong id="code_example">#=> {"i"=>["david"], "p"=>["lamps", "lamps", "lamps", "lamps"], "k"=>["becky"], "r"=>["andrew"], "l"=>["adellyn"]}</strong>
+<br></br>
+           <strong id="code_example">>family.group_by { |name| name[4] }</strong><br></br>
+           <strong id="code_example">#=> {"d"=>["david"], "s"=>["lamps", "lamps", "lamps", "lamps"], "y"=>["becky"], "e"=>["andrew"], "l"=>["adellyn"]
+<br></br>
+           <strong id="code_example">>family.group_by { |name| name[5] }</strong><br></br>
+           <strong id="code_example">#=> {nil=>["david", "lamps", "becky", "lamps", "lamps", "lamps"], "w"=>["andrew"], "y"=>["adellyn"]}</strong>
+<br></br>
+           <strong id="code_example">>family.group_by { |name| name[6] }</strong><br></br>
+           <strong id="code_example">#=> {nil=>["david", "lamps", "becky", "lamps", "andrew", "lamps", "lamps"], "n"=>["adellyn"]}</strong>
+<br></br>
+</strong>
+<div id="line2"></div>
+
+          For this last example, the criteria for grouping is if the name is lamps. This creates two keys, false and true. If the name is lamps, it is assigned to the true key. Otherwise the name is assigned to the false key.
+<br></br>
+          <strong id="code_example">>family.group_by { |name| name == "lamps" }</strong><br></br>
+          <strong id="code_example">#=> {false=>["david", "becky", "andrew", "adellyn"], true=>["lamps", "lamps", "lamps", "lamps"]}</strong>
+<br></br>
+
+<div id="line2"></div>
+
+          This grouping can also be used with numbers. The example below takes the numbers 1 through 6, and then i%3 organizes them into groups of 3. If it had been i%2, it would create groups of 2, and i%6 would create groups of 6.
+<br></br>
+
+          <strong id="code_example">(1..6).group_by { |i| i%3 }</strong>
+          <br></br>
+
+          <strong id="code_example">#=> {0=>[3, 6], 1=>[1, 4], 2=>[2, 5]}</strong>
+
+<br></br>
+
+        </p>
+
+      </div>
+      <div id="right">
+        <div>
+          <img id="profile" src="imgs/LinkedInProfileWeb2.jpg"/>
+        </div>
+        <div>
+          <p class="gray_text">Recent Posts</p>
+          <a href="https://luminous14.github.io/blog-posts/t1-compare-websites.html">Comparing Websites</a><br></br>
+          <a href="https://luminous14.github.io/blog-posts/c1-chefs-kitchen.html">Chefs in the Kitchen</a><br></br>
+        </div>
+        <div>
+          <p class="gray_text">Archives</p>
+          <a href="">August 2014</a><br></br>
+        </div>
+      </div>
+    </body>
+</html>
+

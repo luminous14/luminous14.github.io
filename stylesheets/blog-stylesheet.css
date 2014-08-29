@@ -99,11 +99,21 @@ div:nth-child(5) a{
   margin-bottom: 8%;
 }
 
+#line2 {
+  width: 100%;
+  border: solid 1px lightgray;
+  margin-bottom: 3%;
+}
+
 #imgJavaScript {
   height:30%;
   width:30%;
   display:block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#code_example {
+  font-size: .9em;
 }
 
