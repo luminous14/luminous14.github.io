@@ -140,6 +140,14 @@ div:nth-child(5) a{
   margin-right: auto;
 }
 
+#imgYoDawg {
+  height:60%;
+  width:60%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #code_example {
   font-size: .9em;
 }
