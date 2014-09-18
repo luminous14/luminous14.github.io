@@ -165,3 +165,8 @@ br {
    display: block;
    margin: 7px 0;
 }
+
+code {
+  font-size: 120%;
+  color: black;
+}
