@@ -50,24 +50,15 @@ section {
   position:relative;
   left:0;
   top:0;
-  line-height: 110%;
 }
 
-aside {
-  float: left;
-  color: #FF8C00;
-  margin-left: 30px;
-  margin-right:50px;
-
-}
-
-aside ul {
+section ul {
   list-style: none;
 }
 
-aside ul a {
-  font-size:14px;
+section ul li a {
   color: #666666;
+  line-height: 130%;
 }
 
 footer {
@@ -80,11 +71,6 @@ footer {
 
 }
 
-small {
-  color: #014647;
-}
-
-
 #content {
   position:relative;
   width: 850px;
@@ -96,57 +82,8 @@ small {
   box-shadow: -10px 0px 5px rgba(0,0,0,0.50);
 }
 
-#profilePic {
-  height:200px;
-  width:200px;
-  border-radius:8px;
-  box-shadow: -5px 0px 3px rgba(0,0,0,0.30);
-
-
-}
-
-#twitter {
-  display: inline-block;
-}
-
-#facebook {
-  display: inline-block;
-}
-
-#linkedIn{
-  display: inline-block;
-}
-
-#gitHub{
-  display: inline-block;
-}
-
-#quora{
-  display: inline-block;
-}
-
-#email {
-  color: #666666;
-  font-size:19px;
-  margin-top:3%;
-}
-
-#techBlog {
-  margin-top:15%;
-  line-height:120%;
-}
-
 h3 {
-  padding-bottom: 2px;
   color: #FF8C00;
-}
-
-#asideLine1 {
-  background-color: #367BA9;
-  height: 1px;
-  width: 93%;
-  margin-bottom: 17px;
-  margin-top:2px;
 }
 
 .asideLine2 {
@@ -155,6 +92,7 @@ h3 {
   width: 80%;
 }
 
-#about {
-  padding-top:12px;
+br {
+  display: block;
+  margin:10px 0;
 }
