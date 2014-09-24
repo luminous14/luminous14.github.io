@@ -1,82 +1,143 @@
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
   <head>
     <link type="text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css"/>
     <title>David Lamps's Journey into Web Development</title>
   </head>
-    <body>
-      <div>
-        <a href="../index.html">Home</a>
-      </div>
 
-      <div class="myname">
-        David Lamps
-      </div>
+  <body>
+<!--     <div id="bgImg"></div>
+    <div id="leftStrip"></div>
+    <div id="rightStrip"></div>
+    <div id="main"> -->
+    <div id="main">
 
-      <div id="atdbc">
-        at DevBootcamp
-      </div>
 
-      <div>
-        <p id="description"></p>
-      </div>
-      <div class="gray_text" id="left">
-        <p>September 12, 2014</p>
-        <h3>Comparing Modules and Classes</h3>
-        <img id="imgModular" src="imgs/modular.jpg">
-        <p>Before researching ruby modules for this blog post, I had a vague notion that they can add functionality to my code. Reading through chapter 4 of "The Well-Grounded Rubyist" today has helped shed some light on what they do in Ruby and how they compare to classes.
-        <br></br>
-        The definition of module from dictionary.com reads:
-        <br>
-        <blockquote><em><strong>module</strong><br>a separable component, frequently one that is interchangeable with others, for assembly into units of differing size, complexity, or function.</em></blockquote>
+      <div class="container">
 
-        The term module is used aptly in Ruby, because they are components that can be inserted into classes interchangeably to create new designs.
-        <br></br>
-        Here's a run down of some of the things I've learned:
-        <br></br>
-        <ol>
-          <li>A class is a type of module.</li>
-          <br></br>
+        <header>
 
-          <li>Modules are structured the same as classes, except when defining a module, we use the keyword "module" instead of "class".</li>
-          <br></br>
+          <ul id="menu">
+            <li><a href="https://luminous14.github.io/index.html">HOME</a></li>
+            <li><a href="https://luminous14.github.io/blog-posts/blog.html">BLOG</a></li>
+            <li><a href="https://luminous14.github.io/projects/projects.html">PROJECTS</a></li>
+            <li><a href="http://davidlampsart.blogspot.com/" target="_blank">ART</a></li>
+          </ul>
+        </header>
 
-          <li>We can create an instance of a class, but not an instance of a module. In my post last week I used an example of a BoxOfChocolates class where I can create as many kinds of chocolate boxes as my heart desires. These chocolate boxes are each an instance of the BoxOfChocolates class. Each of my boxes can execute the instance methods defined within the BoxOfChocolates class. While you can't create an instance of a module, you can mix a module in with a class. This means I define a set of methods within a module, and then source it into my class later. The methods from the module are used within my class along with the instance methods defined by my class. To source a module into a class we use the keywords "include" or "prepend". "include" is used when we want class methods to have priority and "prepend" is used when we want module methods to have priority. This is important when a module and a class contain methods that have the same names.</li>
-          <br></br>
+        <div id="content">
+          <section>
+            <small>September 12, 2014</small>
+            <br></br>
+            <h2>Comparing Modules and Classes</h2>
+            <img id="imgLeadPost" src="imgs/modular.png">
+            <p>Before researching ruby modules for this blog post, I had a vague notion that they can add functionality to my code. Reading through chapter 4 of "The Well-Grounded Rubyist" today has helped shed some light on what they do in Ruby and how they compare to classes.
+            <br></br>
+            The definition of module from dictionary.com reads:
+            <br>
+            <blockquote><em><strong>module</strong><br>a separable component, frequently one that is interchangeable with others, for assembly into units of differing size, complexity, or function.</em></blockquote>
 
-          <li>A class inheriting methods from another class is similar to a class having methods mixed in from a module. The big difference is that a class can only inherit methods from one other class, but it may have any number of methods from any number of modules mixed into it.</li>
-          <br></br>
+            The term module is used aptly in Ruby, because they are components that can be inserted into classes interchangeably to create new designs.
+            <br></br>
+            Here's a run down of some of the things I've learned:
+            <br></br>
+            <ol>
+              <li>A class is a type of module.</li>
+              <br></br>
 
-          <li>Conventionally, classes are named with a noun and modules are named with an adjective, although this is not a rule. An example might be the following classes: BoxOfChocolates, BagOfSkittles, BucketOfGumballs. These classes might need to make use of the same methods, so I create a module called Sugary containing those methods to be mixed in with my classes. A module is concerned with what behaviors we add to a class. A class is about what kind of object we are creating, which will include the behaviors of the module. Like an adjective describing a noun, a module is used to describe a class.</li>
-          <br></br>
+              <li>Modules are structured the same as classes, except when defining a module, we use the keyword "module" instead of "class".</li>
+              <br></br>
 
-          <li>Modules can contain classes. To access a class from within a module you would use this syntax:
-                    <br></br>
+              <li>We can create an instance of a class, but not an instance of a module. In my post last week I used an example of a BoxOfChocolates class where I can create as many kinds of chocolate boxes as my heart desires. These chocolate boxes are each an instance of the BoxOfChocolates class. Each of my boxes can execute the instance methods defined within the BoxOfChocolates class. While you can't create an instance of a module, you can mix a module in with a class. This means I define a set of methods within a module, and then source it into my class later. The methods from the module are used within my class along with the instance methods defined by my class. To source a module into a class we use the keywords "include" or "prepend". "include" is used when we want class methods to have priority and "prepend" is used when we want module methods to have priority. This is important when a module and a class contain methods that have the same names.</li>
+              <br></br>
 
-          instance = Module::Class.new
-          <br></br>
+              <li>A class inheriting methods from another class is similar to a class having methods mixed in from a module. The big difference is that a class can only inherit methods from one other class, but it may have any number of methods from any number of modules mixed into it.</li>
+              <br></br>
 
-          or
-          <br></br>
+              <li>Conventionally, classes are named with a noun and modules are named with an adjective, although this is not a rule. An example might be the following classes: BoxOfChocolates, BagOfSkittles, BucketOfGumballs. These classes might need to make use of the same methods, so I create a module called Sugary containing those methods to be mixed in with my classes. A module is concerned with what behaviors we add to a class. A class is about what kind of object we are creating, which will include the behaviors of the module. Like an adjective describing a noun, a module is used to describe a class.</li>
+              <br></br>
 
-          box = Sugary::BoxOfChocolates.new</li>
-        </ol>
-        I've heard the term module numerous times and am happy to have a better understanding of what they are and how they can be used. Now I can start making other candies besides chocolates all the more easily.
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-      </div>
-      <div id="right">
-        <div>
-          <img id="profile" src="imgs/LinkedInProfileWeb2.jpg"/>
-        </div>
-        <div>
-          <p class="gray_text">Recent Posts</p>
-          <a href="https://luminous14.github.io/blog-posts/t1-compare-websites.html">Comparing Websites</a><br></br>
-          <a href="https://luminous14.github.io/blog-posts/c1-chefs-kitchen.html">Chefs in the Kitchen</a><br></br>
-        </div>
-        <div>
-          <p class="gray_text">Archives</p>
-          <a href="">August 2014</a><br></br>
-        </div>
-      </div>
-    </body>
+              <li>Modules can contain classes. To access a class from within a module you would use this syntax:
+                        <br></br>
+
+              instance = Module::Class.new
+              <br></br>
+
+              or
+              <br></br>
+
+              box = Sugary::BoxOfChocolates.new</li>
+            </ol>
+            <p>I've heard the term module numerous times and am happy to have a better understanding of what they are and how they can be used. Now I can start making other candies besides chocolates all the more easily.</p>
+          </section>
+
+          <aside>
+            <div id="contact">
+              <img src="imgs/LinkedInProfileWeb2.jpg" id="profilePic">
+              <div id="email">
+                davidlamps@gmail.com
+              </div>
+
+              <div id="asideLine1"></div>
+
+              <div id="twitter">
+                <a href="https://twitter.com/dlamps14" target="_blank"><img src="../indexImgs/twitter.png"></a>
+              </div>
+              <div id="facebook">
+                <a href="https://www.facebook.com/david.lamps" target="_blank"><img src="../indexImgs/facebook.png"></a>
+              </div>
+              <div id="linkedIn">
+                <a href="http://www.linkedin.com/in/davidlamps/" target="_blank"><img src="../indexImgs/linked-in.png"></a>
+              </div>
+              <div id="gitHub">
+                <a href="https://github.com/luminous14" target="_blank"><img src="../indexImgs/icoGitHub.png"></a>
+              </div>
+              <div id="quora">
+                <a href="http://www.quora.com/David-Lamps" target="_blank"><img src="../indexImgs/quora.png"></a>
+              </div>
+            </div><!--end contact-->
+
+            <div id="techBlog">
+              <h3>TECHNICAL BLOG</h3>
+              <div class="asideLine2"></div>
+              <ul>
+                <li><a href="https://luminous14.github.io/blog-posts/week1_technical.html">Comparing Websites</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week2_technical.html">CSS: Fixed, Relative, and Absolute</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week3_technical.html">Why is JavaSCript so Popular?</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week4_technical.html">Enumerable#group_by</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week5_technical.html">Time for Class!</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week6_technical.html">Comparing Modules and Classes</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week7_technical.html">SQL Injections - OUCH!</a></li>
+              </ul>
+            </div><!--end techBlog-->
+
+            <div id ="culturalBlog">
+              <h3>CULTURAL BLOG</h3>
+              <div class="asideLine2"></div>
+              <ul>
+                <li><a href="https://luminous14.github.io/blog-posts/week1_cultural.html">Chef's in the Kitchen</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week3_cultural.html">My Thinking Style and Learning</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week4_cultural.html">Privacy and Technology</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week5_cultural.html">Pairing and Feedback at DBC</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week6_cultural.html">Stereotype Threat</a></li>
+                <li><a href="https://luminous14.github.io/blog-posts/week7_cultural.html">Affirmation and Stereotype Threat</a></li>
+              </ul>
+            </div><!--end culturalBlog-->
+          </aside>
+        </div><!--end content-->
+
+      </div><!--end main container-->
+    </div><!--end main-->
+
+    <footer>
+      <div class="container">
+        <p>Copyright &copy 2014  David Lamps<br />
+        All Rights Reserved</p>
+      </div><!--end footer container-->
+    </footer>
+
+  </body>
+
 </html>
-
