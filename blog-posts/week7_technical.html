@@ -32,56 +32,56 @@
             <small>September 18, 2014</small>
             <br></br>
             <h2>SQL Injections - OUCH!</h2>
-        <img id="imgLeadPost" src="imgs/injection.png">
-        This week I've been learning about SQL and databases. For this technical blog I've done a little research on SQL injection; what it is, how it can be dangerous, and how damage can be prevented. Most of the modified code examples below I found on <a href="http://www.w3schools.com/sql/sql_injection.asp">w3schools.com</a>.
-<br></br>
-        SQL stands for "Structured Query Language" and is commonly used to manage tabular data. Through SQL one can issue commands to retrieve information from a database and to make changes as well. Companies will often store customer information in databases where a row within the table might include customer name, phone number, email address, credit card number, etc. Injection comes into play when server code allows for dynamic queries. Here's an example of a static query I would run, and its result, in SQL to retrieve information from a basic table called "users", containing information on two users:
+            <img id="imgLeadPost" src="imgs/injection.png">
+            <p>This week I've been learning about SQL and databases. For this technical blog I've done a little research on SQL injection; what it is, how it can be dangerous, and how damage can be prevented. Most of the modified code examples below I found on <a href="http://www.w3schools.com/sql/sql_injection.asp">w3schools.com</a>.</p>
 
-        <pre><code>
+            <p>SQL stands for "Structured Query Language" and is commonly used to manage tabular data. Through SQL one can issue commands to retrieve information from a database and to make changes as well. Companies will often store customer information in databases where a row within the table might include customer name, phone number, email address, credit card number, etc. Injection comes into play when server code allows for dynamic queries. Here's an example of a static query I would run, and its result, in SQL to retrieve information from a basic table called "users", containing information on two users:</p>
+
+            <pre><code>
  SELECT id,first_name,last_name,email FROM users;
 
   id  first_name  last_name   email
   --  ----------  ---------   ---------------------
   1   Kimmy       Lin         kimmy@devbootcamp.com
   2   David       Lamps       davidlamps@gmail.com
-      </code></pre>
+            </code></pre>
 
-        To enable dynamic queries, a server might include code something like this:
+            <p>To enable dynamic queries, a server might include code something like this:</p>
 
-        <pre><code>
+            <pre><code>
   txtID = getRequestString("id");
   txtSQL = "SELECT * FROM Users WHERE id = " + txtID;
-        </code></pre>
+            </code></pre>
 
-        This code allows for an id variable to be defined by whoever is querying the database, instead of requiring a literal id such as "1" or "2" like in the table above. The danger here is that in SQL, if an id of the boolean true is evaluated, it will return all of the table information, including credit card numbers and other personal information to anyone, including hackers on the outside. This is what is known as SQL injection. Here's an example of what this might look like:
-        <pre><code>
+            <p>This code allows for an id variable to be defined by whoever is querying the database, instead of requiring a literal id such as "1" or "2" like in the table above. The danger here is that in SQL, if an id of the boolean true is evaluated, it will return all of the table information, including credit card numbers and other personal information to anyone, including hackers on the outside. This is what is known as SQL injection. Here's an example of what this might look like:</p>
+
+            <pre><code>
   SELECT * FROM users WHERE id = 105 or 1=1
-        </pre></code>
-        This code asks the database to return all information by using the wildcard "*", from the users table, for every id that is equal to 105 OR if it is 1=1. 1=1 evaluates to the boolean value true, so this means the query will return all information for every id in the table, potentially including credit card numbers, passwords, and more. This is a bad thing, and similar injections could result in the deletion or modification of entire databases.
-<br></br>
-        When I was in highschool, I took a class in Pascal my senior year. The most memorable part of the course was navigating around in DOS, playing <a href="https://www.youtube.com/watch?v=UDc3ZEKl-Wc">QBASIC Gorillas</a>, and sending and receiving rude messages to and from other student's terminals. This same year someone had figured out a way to delete some of the schools records. To this day I don't know who did it or how, but the administration was sure hot over it and assumed the culprit was a student in my computer class. I don't believe they ever found the hacker. Whether injection was used to wreak this havoc for my school's adminstration office, I can't tell. What I do know is that if there had been proper security in place, it would have made such an act more difficult if not impossible.
-<br></br>
-        So, how does one prevent attacks like this? Since I haven't had much experience with SQL I don't completely have the answer. This <a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet">cheat sheet resource</a> has examples of how to defend against injection. One particular defense is to make use of parameters. An example of using parameters in ASP.NET Razor might be:
+            </pre></code>
 
-        <pre><code>
+            <p>This code asks the database to return all information by using the wildcard "*", from the users table, for every id that is equal to 105 OR if it is 1=1. 1=1 evaluates to the boolean value true, so this means the query will return all information for every id in the table, potentially including credit card numbers, passwords, and more. This is a bad thing, and similar injections could result in the deletion or modification of entire databases.</p>
+
+            <p>When I was in highschool, I took a class in Pascal my senior year. The most memorable part of the course was navigating around in DOS, playing <a href="https://www.youtube.com/watch?v=UDc3ZEKl-Wc">QBASIC Gorillas</a>, and sending and receiving rude messages to and from other student's terminals. This same year someone had figured out a way to delete some of the schools records. To this day I don't know who did it or how, but the administration was sure hot over it and assumed the culprit was a student in my computer class. I don't believe they ever found the hacker. Whether injection was used to wreak this havoc for my school's adminstration office, I can't tell. What I do know is that if there had been proper security in place, it would have made such an act more difficult if not impossible.</p>
+
+            <p>So, how does one prevent attacks like this? Since I haven't had much experience with SQL I don't completely have the answer. This <a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet">cheat sheet resource</a> has examples of how to defend against injection. One particular defense is to make use of parameters. An example of using parameters in ASP.NET Razor might be:</p>
+
+            <pre><code>
   txtId = getRequestString("id");
   txtSQL = "SELECT * FROM Users WHERE id = @0";
   db.Execute(txtSQL,txtId);
-        </pre></code>
+            </pre></code>
 
-        I don't quite understand the use of parameters, (in this case @0 is the parameter), but what I understand from this example is that the parameter forces a literal interpretation of whatever id the user supplies. If injection is attempted like so:
-        <pre><code>
+            <p>I don't quite understand the use of parameters, (in this case @0 is the parameter), but what I understand from this example is that the parameter forces a literal interpretation of whatever id the user supplies. If injection is attempted like so:</p>
+
+            <pre><code>
   SELECT * FROM users WHERE id = 105 or 1=1
-        </pre></code>
+            </pre></code>
 
-        instead of evaluating 1=1 to true, 1=1 will be taken literally. That is, the database will be asked to search for an id called "1=1", which of course does not exist, and therefore no information is sent to the person making the query.
-<br></br>
-        When I worked at Rhythm & Hues Studios, I recall innocently asking someone in MIS to help me learn how to query company databases through mySQL. The response was a bit of a blow off. I asked someone in our education department about it later and he told me that MIS is very leery of having people access databases through mySQL, and that I should probably just drop the subject. Having researched potential security threats, I have a better appreciation for this experience.
-<br></br>
-        Information security is a big deal these days, and I'm just starting to get a taste for it. Learning about SQL injection has helped open my eyes to why it's important to have proper protocols in place when dealing with databases.
+            <p>Instead of evaluating 1=1 to true, 1=1 will be taken literally. That is, the database will be asked to search for an id called "1=1", which of course does not exist, and therefore no information is sent to the person making the query.</p>
 
+            <p>When I worked at Rhythm & Hues Studios, I recall innocently asking someone in MIS to help me learn how to query company databases through mySQL. The response was a bit of a blow off. I asked someone in our education department about it later and he told me that MIS is very leery of having people access databases through mySQL, and that I should probably just drop the subject. Having researched potential security threats, I have a better appreciation for this experience.</p>
 
-
+            <p>Information security is a big deal these days, and I'm just starting to get a taste for it. Learning about SQL injection has helped open my eyes to why it's important to have proper protocols in place when dealing with databases.</p>
           </section>
 
           <aside>
