@@ -207,3 +207,7 @@ section p {
 section ul li {
   margin-left: 30px;
 }
+
+section img {
+  padding-top:12px;
+}
