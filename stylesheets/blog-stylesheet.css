@@ -211,3 +211,14 @@ section ul li {
 section img {
   padding-top:12px;
 }
+
+#columnLeft {
+  display:inline-block;
+  margin-right: 20px;
+  font-size:14px;
+}
+
+#columnRight {
+  display:inline-block;
+  font-size:14px;
+}
