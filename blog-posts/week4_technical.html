@@ -36,24 +36,20 @@
 
         <p>I love learning what methods can do on ruby.doc.org. For this post I'll take you through what I've learned about <a href="http://ruby-doc.org/core-2.0.0/Enumerable.html#method-i-group_by">Enumerable#group_by.</a></p>
 
-        <p>The group_by method of the Enumarable module in Ruby takes a set of data and groups it into a collection know as a hash. The examples below show an array of names of my family members:
+        <p>The group_by method of the Enumarable module in Ruby takes a set of data and groups it into a collection know as a hash. The examples below show an array of names of my family members:</p>
 
         <p>
           <strong id="code_example">>family = ["david", "lamps", "becky", "lamps", "andrew", "lamps", "adellyn", "lamps"]</strong>
 <div id="line2"></div>
 
-          Below I'll show how the group_by method organizes my family member's names into a hash, depending on how I tell it to group it. When applying .group_by, in the first example it is followed by { |name| name[0] }. This is saying for each name in my array, use the 0 index position of the word to group them into key-value pairs within a hash. The first example uses the first letter of each name as the criteria:
-<br></br>
+          <p>Below I'll show how the group_by method organizes my family member's names into a hash, depending on how I tell it to group it. When applying .group_by, in the first example it is followed by { |name| name[0] }. This is saying for each name in my array, use the 0 index position of the word to group them into key-value pairs within a hash. The first example uses the first letter of each name as the criteria:</p>
           <strong id="code_example">>family.group_by { |name| name[0] }</strong> <br></br>
           #=> {"d"=>["david"], "l"=>["lamps", "lamps", "lamps", "lamps"], "b"=>["becky"], "a"=>["andrew", "adellyn"]}
-<br></br>
-          This basically collects all of the names based on if they have the same first letter. So david is assigned to the d key, lamps,lamps,lamps,lamps is assignd to the l key, etc.
-<br></br>
+          <p>This basically collects all of the names based on if they have the same first letter. So david is assigned to the d key, lamps,lamps,lamps,lamps is assignd to the l key, etc.</p>
 
 <div id="line2"></div>
 
-          Below are examples of grouping by various index numbers:
-<br></br>
+          <p>Below are examples of grouping by various index numbers:</p>
           <strong id="code_example">>family.group_by { |name| name[1] }</strong><br></br>
            <strong id="code_example">#=> {"a"=>["david", "lamps", "lamps", "lamps", "lamps"], "e"=>["becky"], "n"=>["andrew"], "d"=>["adellyn"]}</strong>
 <br></br>
@@ -71,20 +67,16 @@
 <br></br>
            <strong id="code_example">>family.group_by { |name| name[6] }</strong><br></br>
            <strong id="code_example">#=> {nil=>["david", "lamps", "becky", "lamps", "andrew", "lamps", "lamps"], "n"=>["adellyn"]}</strong>
-<br></br>
 </strong>
 <div id="line2"></div>
 
-          For this last example, the criteria for grouping is if the name is lamps. This creates two keys, false and true. If the name is lamps, it is assigned to the true key. Otherwise the name is assigned to the false key.
-<br></br>
+          <p>For this last example, the criteria for grouping is if the name is lamps. This creates two keys, false and true. If the name is lamps, it is assigned to the true key. Otherwise the name is assigned to the false key.</p>
           <strong id="code_example">>family.group_by { |name| name == "lamps" }</strong><br></br>
           <strong id="code_example">#=> {false=>["david", "becky", "andrew", "adellyn"], true=>["lamps", "lamps", "lamps", "lamps"]}</strong>
-<br></br>
 
 <div id="line2"></div>
 
-          This grouping can also be used with numbers. The example below takes the numbers 1 through 6, and then i%3 organizes them into groups of 3. If it had been i%2, it would create groups of 2, and i%6 would create groups of 6.
-<br></br>
+          <p>This grouping can also be used with numbers. The example below takes the numbers 1 through 6, and then i%3 organizes them into groups of 3. If it had been i%2, it would create groups of 2, and i%6 would create groups of 6.</p>
 
           <strong id="code_example">(1..6).group_by { |i| i%3 }</strong>
           <br></br>
