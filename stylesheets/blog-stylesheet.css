@@ -59,7 +59,6 @@ section a {
 
 aside {
   float:right;
-  color: #FF8C00;
   margin-right:5%;
   margin-top:5%;
 }
@@ -70,8 +69,19 @@ aside ul {
 
 aside ul a {
   font-size:14px;
-  color: #666666;
+  color: #989898;
 }
+
+aside ul a:hover {
+  color: #367BA9;
+}
+
+aside h3 {
+  color: #FF8C00;
+  font-weight: normal;
+  font-size: 19px;
+}
+
 
 footer {
   padding-left: 60px;
@@ -128,7 +138,7 @@ small {
 }
 
 #email {
-  color: #666666;
+  color: #868686;
   font-size:19px;
   margin-top:3%;
 }
@@ -146,6 +156,7 @@ small {
 h2 {
   padding-bottom: 15px;
   color: #FF8C00;
+  font-size: 22px;
 }
 
 section h3 {
@@ -162,7 +173,7 @@ section h3 {
 }
 
 .asideLine2 {
-  background-color: #367BA9;
+  background-color: #7ec5e8;
   height: 2px;
   width: 93%;
   margin-bottom: 10px;
@@ -189,6 +200,8 @@ section h3 {
 section p {
   margin-top:20px;
   margin-bottom:20px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 section ul li {
