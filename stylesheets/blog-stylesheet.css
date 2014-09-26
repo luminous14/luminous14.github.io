@@ -192,8 +192,9 @@ section h3 {
   margin-right: 96%;
   margin-bottom: 4%;
   float: left;
-
 }
+
+
 
 #line {
   width: 100%;
@@ -214,9 +215,20 @@ section ul li {
 }
 
 section img {
-  padding-top:12px;
+  margin-top:12px;
 }
 
+
+#imgWireframe {
+  height:100%;
+  width:100%;
+  display:block;
+  margin-left: auto;
+  margin-right: 96%;
+  margin-bottom: 4%;
+  box-shadow: -10px 2px 5px rgba(0,0,0,0.30);
+  border-radius: 8px;
+}
 #columnLeft {
   display:inline-block;
   margin-right: 20px;
