@@ -12,6 +12,7 @@ body { font-family: Helvetica, Arial, sans-serif; }
 body {
     background: url(../indexImgs/chicagoBG.jpg) no-repeat;
     background-color:#003366;
+    background-position:0px 141px;
 }
 
 #main {
@@ -20,6 +21,7 @@ body {
 
 header {
   margin-bottom: 29px;
+  width:100%;
 }
 
 ul#menu {
@@ -79,7 +81,7 @@ aside ul a {
 footer {
   padding-left: 60px;
   padding-top: 340px;
-  color: gray;
+  color: #537CA5;
   line-height: 130%;
   padding-bottom:30px;
   font-size: 12px;

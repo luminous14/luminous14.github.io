@@ -12,6 +12,7 @@ body { font-family: Helvetica, Arial, sans-serif; }
 body {
     background: url(../indexImgs/chicagoBG.jpg) no-repeat;
     background-color:#003366;
+    background-position:0px 141px;
 }
 
 #main {
@@ -86,7 +87,7 @@ aside h3 {
 footer {
   padding-left: 60px;
   padding-top: 50px;
-  color: gray;
+  color: #537CA5;
   line-height: 130%;
   padding-bottom:30px;
   font-size: 12px;
