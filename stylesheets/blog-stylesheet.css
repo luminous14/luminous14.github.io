@@ -153,14 +153,14 @@ small {
   line-height:120%;
 }
 
-h2 {
-  padding-bottom: 15px;
+section h2 {
+  /*padding-bottom: 15px;*/
   color: #FF8C00;
   font-size: 22px;
 }
 
 section h3 {
-  padding-bottom: 20px;
+  /*padding-bottom: 15px;*/
   color: #FF8C00;
 }
 
