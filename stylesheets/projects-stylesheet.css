@@ -66,6 +66,10 @@ section ul li a {
   line-height: 130%;
 }
 
+section ul li a:hover {
+  color: #367BA9;
+}
+
 footer {
   padding-left: 60px;
   padding-top: 340px;
@@ -92,7 +96,7 @@ h3 {
 }
 
 .asideLine2 {
-  background-color: #367BA9;
+  background-color: #7ec5e8;
   height: 2px;
   width: 80%;
 }
