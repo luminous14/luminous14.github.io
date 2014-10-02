@@ -1,0 +1,271 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/unit3_cheatsheet.css"/>
+    <title>Ruby/JavaScript Loops Cheat Sheet</title>
+  </head>
+
+  <body>
+    <div id="main">
+      <header>
+        Ruby and Javascript Loops Cheat Sheet<br>
+      </header>
+      <section>
+        <p>This cheat sheet compares equivalent Ruby and JavaScript looping concepts.</p>
+      <section>
+<TABLE>
+  <TR>
+    <TH>Ruby</TH>
+    <TH>JavaScript</TH>
+  </TR>
+  <TR>
+    <TD>
+      <strong>While</strong><br>
+              --------------
+<pre><code>
+i = 0
+
+while i < 5  do
+   puts("Inside the loop i = #{i}" )
+   i +=1
+end
+</pre></code>
+    </TD>
+    <TD>
+      <strong>While</strong><br>
+              --------------
+<pre><code>
+var i = 0
+
+while (i < 5) {
+    console.log("Inside the loop i = " + i);
+    i++
+}
+</pre></code>
+      </TD>
+   </TR>
+  <TR>
+    <TD>
+      <strong>While/Begin</strong><br>
+              -------------------
+<pre><code>
+puts("Inside the loop i = #{i}" )
+   i +=1
+end while i < 5
+
+
+</pre></code>
+    </TD>
+    <TD>
+      <strong>Do/While</strong><br>
+              --------------
+<pre><code>var i = 0
+
+while (i < 5) {
+    console.log("Inside the loop i = " + i);
+    i++
+}</pre></code>
+      </TD>
+   </TR>
+  <TR>
+    <TD>
+      <strong>Until</strong><br>
+              --------------
+<pre><code>
+until i > num  do
+   puts("Inside the loop i = #{i}" )
+   i +=1;
+end
+</pre></code>
+    </TD>
+    <TD>
+      <strong>N/A</strong><br>
+              --------------
+<pre><code>
+
+
+
+
+
+</pre></code>
+      </TD>
+   </TR>
+  <TR>
+    <TD>
+      <strong>Until/Begin</strong><br>
+              -------------------
+<pre><code>
+begin
+   puts("Inside the loop i = #{i}" )
+   i +=1;
+end until i > num
+</pre></code>
+    </TD>
+    <TD>
+      <strong>N/A</strong><br>
+              --------------
+<pre><code>
+
+
+
+
+
+</pre></code>
+      </TD>
+   </TR>
+  <TR>
+    <TD>
+      <strong>For/In</strong><br>
+              --------------
+<pre><code>
+beatles = ["John","Paul","George","Ringo"]
+
+for i in beatles
+   puts "#{i} is a Beatle."
+end
+</pre></code>
+    </TD>
+    <TD>
+      <strong>For/In</strong><br>
+              --------------
+<pre><code>
+var beatles = ["John","Paul","George","Ringo"];
+
+for (i in beatles) {
+    console.log(beatles[i] + " is a Beatle.");
+}
+</pre></code>
+      </TD>
+   </TR>
+  <TR>
+    <TD>
+      <strong>.each</strong><br>
+              -------------------
+<pre><code>
+beatles.each do |i|
+   puts "#{i} is a Beatle."
+end
+</pre></code>
+    </TD>
+    <TD>
+      <strong>For</strong><br>
+              --------------
+<pre><code>
+for (i = 0; i < beatles.length; i++) {
+    console.log(beatles[i] + " is a Beatle.");
+}
+</pre></code>
+      </TD>
+   </TR>
+  <TR>
+    <TD>
+      <strong>Break</strong><br>
+              --------------
+<pre><code>
+(0..5).each do |i|
+   if i > 2
+      break
+   end
+   puts "Value of local variable is #{i}"
+end
+</pre></code>
+    </TD>
+    <TD>
+      <strong>Break</strong><br>
+              --------------
+<pre><code>
+for (i = 0; i < 5; i++) {
+    if (i > 2) break;
+    console.log("Value of local variable is " + i);
+}
+
+
+</pre></code>
+      </TD>
+   </TR>
+  <TR>
+    <TD>
+      <strong>Next</strong><br>
+              -------------------
+<pre><code>
+(0..5).each do |i|
+   if i < 2
+      next
+   end
+   puts "Value of local variable is #{i}"
+end
+</pre></code>
+    </TD>
+    <TD>
+      <strong>Continue</strong><br>
+              --------------
+<pre><code>
+for (i = 0; i <= 5; i++) {
+    if (i < 2) continue;
+    console.log("Value of local variable is " + i);
+}
+
+
+</pre></code>
+      </TD>
+   </TR>
+
+    <TR>
+    <TD>
+      <strong>Case</strong><br>
+              -------------------
+<pre><code>
+grade = "B"
+
+case grade
+when "A"
+  puts "Well done!"
+when "B"
+  puts "Try harder!"
+when "C","D","F"
+  puts "You need help!!!"
+else
+  puts "You're just making it up!"
+end
+
+
+
+
+</pre></code>
+    </TD>
+    <TD>
+      <strong>Switch</strong><br>
+              --------------
+<pre><code>
+switch (grade) {
+    case "A":
+        console.log("Well Done!");
+        break;
+    case "B":
+        console.log("Try harder!");
+        break;
+    case "C":
+    case "D":
+    case "F":
+        console.log("You need help!!!");
+        break;
+    default:
+        console.log("You're just making it up!");
+        break;
+}
+</pre></code>
+      </TD>
+   </TR>
+</TABLE>
+
+      </section>
+    </div>
+    <footer>
+      Copyright &copy 2014  David Lamps<br />
+      All Rights Reserved
+    </footer>
+  </body>
