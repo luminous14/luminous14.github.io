@@ -31,12 +31,12 @@ border-bottom-left-radius: 5px;
 #profile_left {
 position:relative;
 display:inline-block;
-width: 50%;
+width: 48%;
 }
 #profile_right {
 position:absolute;
 display:inline-block;
-width:50%;
+width:48%;
 }
 img {
 padding: 5px;
